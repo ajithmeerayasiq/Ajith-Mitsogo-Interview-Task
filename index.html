@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="acme.css">
+	<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="rpie.js"></script>
+
+  <!-- CSS only -->
+	<title>ACME</title>
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+  <div class="acmelogo">ACME</div>
+  <a href="#"><div id="hom"></div>Home</a>
+  <a href="#"><div id="dash"></div>Dashboard</a>
+  <a href="#"> <div id="inx"></div> Inbox <span class="new">New</span> </a>
+  <a href="#"><div id="prod"></div>Products</a>
+  <a href="#"><div id="adm"></div>Admin</a>
+</div>
+
+<div id="main" class="main">
+
+  <div class="navcontainer">
+    <div class="burger" onclick="openNav()"></div>
+    <div class="sicon"></div>
+
+    <form class="scontainer">
+      <input type="text" name="ajith" placeholder="Search transactions,invoices or help">
+    </form>
+
+    <div class="ritalin">
+      <div class="bell"></div> <div class="greendot"></div>
+    <div class="uname">John Doe</div> <div class="dicon"></div>
+    <div class="propic"></div>
+    </div>
+
+  </div>
+
+  <div class="forpad">
+
+  <div class="overview">Overview
+    <a href="#funds" class="funds">Add Funds
+      <div class="plus"></div>
+    </a>
+  </div>
+
+
+
+  <div class="containerblock prof" id="prof">  <!-- prifle container start -->
+
+    <div class="pic"></div>
+    <div class="penicon"></div>
+    <div class="pronam">Nick Herasimenka</div>
+    <div class="proloc">United States</div>
+
+
+    <div class="socialtainer">
+      <a href="#twitter"><div class="social" id="twitter"></div></a>
+      <a href="#facebook"><div class="social" id="facebook"></div></a>
+      <a href="#linkedin"><div class="social" id="linkedin"></div></a>
+      <a href="#whatsapp"><div class="social" id="whatsapp"></div></a>
+    </div>
+
+    <div class="line"></div>
+    
+    <div class="ourusers">Our Users
+      <div class="menudot"></div>
+    </div>
+
+    <a href="#james">
+    <div class="userlist">
+      <img src="images/james.jpg">
+      <div class="usercontain">Drew James
+        <div class="detail">
+          <span class="userloc">United states</span>
+          <span class="usermobile">Mobile:8715674877 </span>
+        </div>
+      </div>
+    </div></a>
+
+    <a href="#james">
+    <div class="userlist">
+      <img src="images/kames.jpg">
+      <div class="usercontain">Bavid Kames
+        <div class="detail">
+          <span class="userloc">United states</span>
+          <span class="usermobile">Mobile:8715674877 </span>
+        </div>
+      </div>
+    </div></a>
+
+    <a href="#Emes">
+    <div class="userlist">
+      <img src="images/emes.jpg">
+      <div class="usercontain">Lavid Emes
+        <div class="detail">
+          <span class="userloc">United states</span>
+          <span class="usermobile">Mobile:8715674877 </span>
+        </div>
+      </div>
+    </div></a>
+
+  </div> <!-- profile container ends -->
+
+  <div class="containerblock pie">
+    
+    <div class="ourusers">Sales Distribution</div>
+
+    <div class="piecontainer">
+      <canvas id="myCanvas" width="300" height="300"></canvas>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="legendcontainer">
+      
+        <div>
+          
+      <div class="legdot" style="background-color: #80E2FF;"></div> <span class="legloc">France</span> 
+      <span class="legsale">4260 Sales</span>
+
+      <div class="legdot" style="background-color: #F49FA8;"></div> <span class="legloc">Italy</span> 
+      <span class="legsale">4260 Sales</span>
+        </div>
+
+<div>
+      <div class="legdot" style="background-color: #FFDF94;"></div> <span class="legloc">Japan</span> 
+      <span class="legsale">4260 Sales</span>
+
+      <div class="legdot" style="background-color: #B5B3FB;"></div> <span class="legloc">Canada</span> 
+      <span class="legsale">4260 Sales</span>
+  
+</div>
+
+    </div>
+
+  </div>
+
+  <div class="containerblock grap">
+
+    <div class="ourusers">Statistics
+
+      <div class="gright">
+      <div class="months">Last 6 months</div>
+      <div class="gdicon"></div>
+      </div>
+    </div>
+
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+
+  </div>
+
+  <div class="containerblock tabl" id="tabl"> <!-- table container start -->
+    <div class="Referrer">Referrer</div>
+    <div class="tablcontain">
+  <table>
+    <tr style="border: none;">
+      <th>Location</th>
+      <th>Views</th>
+      <th>Sales</th>
+      <th>Conversion</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td>google.com</td>
+      <td>3746</td>
+      <td>752</td>
+      <td>43%</td>
+      <td>$19,291</td>
+    </tr>
+    <tr>
+      <td>facebook.com</td>
+      <td>8126</td>
+      <td>728</td>
+      <td>32%</td>
+      <td>$17638</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>Ajith</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+  </table>
+</div>
+
+<a href="#show">Show More</a>
+
+  </div> <!-- table container ends -->
+
+  <div class="containerblock provid">
+    <div class="ourusers">Product video
+      <div class="menudot"></div>
+    </div>
+
+<video  height="248px" class="video" poster="images/thumbnail.png">
+  <source src="images/workforce.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<div class="playpause"></div>
+
+  </div>
+
+</div>  <!-- forpad ends here -->
+
+</div> <!-- main ends here -->
+
+
+
+<script>
+function openNav() {
+  var x = document.getElementById("mySidebar");
+   x.classList.toggle("mystyle");
+
+   var y = document.getElementById("main");
+   y.classList.toggle("mainstyle");
+}
+
+$('.video').parent().click(function () {
+  if($(this).children(".video").get(0).paused){        $(this).children(".video").get(0).play();   $(this).children(".playpause").fadeOut();
+    }else{       $(this).children(".video").get(0).pause();
+  $(this).children(".playpause").fadeIn();
+    }
+});
+
+const labels = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: '',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+
+   const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+
+
+   // pie chart plugi
+
+   generatePieGraph('myCanvas', {
+    // Percentage of doughnut size
+  doughnutHoleSize: 52,
+  // Doughnut color
+  doughnutHoleColor: '#fff',
+  values: [25, 40, 35, 65],
+  colors: ['#F49FA8', '#FFDF94', '#B5B3FB', '#80E2FF']
+});
+
+</script>
+   
+</body>
+</html>
+
+
