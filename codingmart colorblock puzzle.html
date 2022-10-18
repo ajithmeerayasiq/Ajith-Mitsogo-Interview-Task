@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	var x=0;
+	const fruits = [];
+	var y=0;
+	var z=0;
+	var flag=0;
+$(document).ready(function(){
+  $(".square").click(function(){
+
+  	y = this.getAttribute("id");
+  	console.log(y);
+  	fruits.push( y);
+    $(this).css("background-color", "grey");
+    x++;
+    if (x==4) {
+    	z=fruits[0];
+    	console.log(z);
+    	$('#'+z).css("background-color", z);
+    	x=0;
+    	fruits.shift();
+    	
+    }
+  });
+});
+</script>
+
+<style type="text/css">
+	.square{
+		
+		display: inline-block;
+		background-color: grey;
+		padding: 50px;
+	}
+	.all{
+		margin: auto;
+		width: 36%;
+		background-color: white;
+	}
+</style>
+
+</head>
+<body>
+
+<div class="all">
+<div class="row">
+<div class="square" style="background-color: red;"  id="red"  >01</div>
+<div class="square" style="background-color: green;"   id="green" >02</div>
+<div class="square" style="background-color: blue;"   id="blue" >03</div>
+<div class="square" style="background-color: yellow;"   id="yellow" >04</div>
+</div>
+
+<div class="row">
+<div class="square" style="background-color: orange;"   id="orange" >05</div>
+<div class="square" style="background-color: pink;"   value="1"  id="pink" >06</div>
+<div class="square" style="background-color: brown;"  id="brown" >07</div>
+<div class="square" style="background-color: violet;"   id="violet" >08</div>
+</div>
+
+<div class="row">
+<div class="square" style="background-color: red;"   id="red" >09</div>
+<div class="square" style="background-color: green;"   id="green" >10</div>
+<div class="square" style="background-color: blue;"   id="blue" >11</div>
+<div class="square" style="background-color: yellow;"   id="yellow" >12</div>
+</div>
+
+<div class="row">
+<div class="square" style="background-color: orange;"   id="orange" >13</div>
+<div class="square" style="background-color: pink;"   id="pink" >14</div>
+<div class="square" style="background-color: brown;"   id="brown" >15</div>
+<div class="square" style="background-color: violet;"   id="violet" >16</div>
+</div>
+</div>
+</body>
+</html>
+
