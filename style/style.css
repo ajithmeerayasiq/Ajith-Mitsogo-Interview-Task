@@ -1,0 +1,786 @@
+body{
+  background-color: #0000001A !important;
+  margin: 0;
+  font-family: Source Sans Pro !important;
+  letter-spacing: 0px;
+  transition: 0.5s;
+}
+
+.sidebar {  /*sidebar starts*/
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #43425D;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 14px 8px 14px 18px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+  font: normal normal normal 16px/20px Source Sans Pro;
+  color: #FFFFFF;
+  overflow-x: auto;
+  margin: 10px 0;
+}
+
+.sidebar a:hover {
+  background-color: #3C3B54;
+  border-left: 5px solid #A3A0FB;
+  color: #ffff;
+}
+
+#main {
+  transition: margin-left .5s;
+  /*padding: 16px;*/
+}
+
+.mystyle{
+  width: 350px;
+}
+
+.mainstyle{
+  margin-left: 350px; 
+}
+
+.sidebar a div{
+  position: relative;
+  top: -2px;
+  height: 24px;
+  width: 24px;
+  margin-right: 6px;
+  float: left;
+}
+
+ #hom{
+  background: url(../images/icons.png) 0 0;
+}
+
+#dash{
+  background: url(../images/icons.png) -56px 0;
+}
+
+#inx{
+  background: url(../images/icons.png) -112px 0;
+}
+
+#prod{
+  background: url(../images/icons.png) -168px 0;
+}
+
+#adm{
+    background: url(../images/icons.png) -224px 0;
+}
+
+.sidebar a:hover #hom{
+  background: url(../images/icons.png) -25px 0;
+}
+
+.sidebar a:hover #dash{
+  background: url(../images/icons.png) -84px 0;
+}
+
+.sidebar a:hover #inx{
+  background: url(../images/icons.png) -140px 0;
+}
+
+.sidebar a:hover #prod{
+  background: url(../images/icons.png) -196px 0;
+}
+
+.sidebar a:hover #adm{
+  background: url(../images/icons.png) -252px 0;
+}
+
+.new{
+  display: inline-block;  
+  border-radius: 66px;
+  font-size: 10px;
+  text-align: center;
+  width: 38px;
+  height: 16px;
+  line-height: 16px;
+  background: #FF4A33 0% 0% no-repeat padding-box;
+  float: right;
+  margin: 5px 20px 0 0;
+}
+
+.acmelogo{
+  color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: normal small-caps bold 26px/20px Source Sans Pro;
+  letter-spacing: 5px;
+  background-color: #3C3B54;
+  padding: 20px 355px 20px 20px;
+}  /*sidebar ends*/
+
+
+.navcontainer{
+  overflow: hidden;
+  padding: 20px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 6px #0000000A;
+  height: 20px;
+}
+
+.sbaricon{
+  display: inline-block;
+  border-radius: 100px;
+  height: 24px;
+  width: 24px;
+}
+
+#burger{
+  background: url(../images/icons.png) 1px 23px;
+}
+
+#isearch{
+  background: url(../images/icons.png) -170px 24px;
+  float: right;
+  margin-right: 20px;
+}
+
+#bell{
+  background: url(../images/icons.png) -197px 26px;
+  position: relative;
+    top: -7px;
+}
+
+#dropicon{
+  background: url(../images/icons.png) -227px 28px;
+  display: none;
+}
+
+input[type=text] {
+  display: inline-block;
+  width: 243px;
+  height: 20px;
+  text-align: left;
+  font: normal normal normal 16px/20px Source Sans Pro;
+  color: #4D4F5C;
+  border: none;
+  position: relative;
+  top: -6px;
+}
+
+.uname{
+  display: none;
+  font: normal normal normal 16px/20px Source Sans Pro;
+  color: #4D4F5C;
+  position: relative;
+  top: -12px;
+  margin-left: 20px;
+}
+
+.greendot{
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #81E37A 0% 0% no-repeat padding-box;
+  border: 1px solid #FFFFFF;
+  border-radius: 100px;
+  float: right;
+    position: relative;
+    left: -2px;
+    top: 3px;
+}
+
+.greenview{
+  display: none;
+}
+
+.navpic{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-image: url("../images/nick.jpg");
+  background-size: contain;
+  margin-left: 10px;
+}
+
+.formstyle{
+  display: none;
+}
+
+.navmenu{
+  float: right;
+}
+
+  .containerblocks{
+  padding: 20px;
+}
+
+.grids{
+  /*display: inline-block;*/
+  padding: 20px;
+  height: 400px;
+  /*width: 88%;*/
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  transition: 0.5s;  
+  margin-top: 20px;
+}
+
+
+
+#provid{
+height: 261px;
+}
+
+#profl{
+height: 520px;
+}
+
+#grap{
+
+}
+
+.notdrop{
+  display: none;
+  position: absolute;
+  top: 60px;
+  /*right: 90px;*/
+  padding: 20px;
+  width: 72%;
+  height: 298px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 8px #5565751A;
+  border-radius: 10px;
+  margin-left: 20px;
+  z-index: 1;
+}
+
+.notview{
+  display: block;
+}
+
+.drops{
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 190px;
+  height: 142px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 8px #5565751A;
+  border-radius: 10px;
+  padding: 20px;
+  color: #43425D;
+  display: none;
+  z-index: 1;
+}
+
+.dropview{
+  display: block;
+}
+
+.ddownicons{
+  display: inline-block;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+}
+
+#uicon{
+  background: url(../images/icons.png) -25px 27px;
+}
+
+#billicon{
+  background: url(../images/icons.png) -52px 26px;
+}
+
+#logicon{
+  background: url(../images/icons.png) -80px 27px;
+}
+
+.iconname{
+  display: inline-block;
+  margin-left: 15px;
+  position: relative;
+  top: -10px;
+  margin-top: 24px;
+}
+
+.notpic{
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-size: contain;
+  border-radius: 100px;
+}
+
+#kamespic{
+  background-image: url(../images/kames.jpg);
+}
+
+#marrypic{
+  background-image: url(../images/marry.jpg);
+}
+
+#mariapic{
+  background-image: url(../images/maria.jpg);
+}
+
+.notnam{
+  font: normal normal 600 16px/13px Source Sans Pro;
+  color:  #4D4F5C;
+  display: inline-block;
+  position: relative;
+    top: -25px;
+    left: 20px;
+
+}
+
+.timeago{
+  float: right;
+  text-align: right;
+  font: normal normal normal 14px/25px Source Sans Pro;
+  color: #43425D;
+  opacity: 0.5;
+}
+
+.message{
+  text-align: left;
+font: normal normal normal 14px/25px Source Sans Pro;
+color: #43425D;
+opacity: 0.5;
+position: relative;
+    top: -25px;
+    left: 65px;
+}
+
+.notline{
+  width: 100%;
+    margin: auto;
+    height: 1px;
+    background-color: #0000001A;
+}
+
+.blueink{
+  color: #3B86FF;
+}
+
+.showmore{
+  text-align: left;
+font: normal normal normal 14px/20px Source Sans Pro;
+letter-spacing: 0px;
+color: #3B86FF;
+    width: 67px;
+    margin: 30px auto 0 auto;
+}
+
+.overview{
+  display: inline-block;
+  font: normal normal 600 28px/40px Source Sans Pro;
+  color: #43425D;
+}
+
+.funds{
+  display: inline-block;
+  font: normal normal normal 16px/25px Source Sans Pro;
+  color: #FFFFFF;
+  background: #6763E3 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  float: right;
+  padding: 13px 20px 13px 14px;
+    text-align: left;
+    width: 133px;
+}
+
+.funds:hover{
+  background-color: #514DDC;
+}
+
+.overcontainer{
+  margin: 20px 20px 0 20px;
+  height: 53px;
+    overflow: hidden;
+}
+
+.plusicon{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  background: url(../images/icons.png) -286px 19px;
+  background-color: #514DDC;
+  float: right;
+  position: relative;
+  top: 6px;
+ } 
+
+ .gridhead{
+  font: normal normal normal 18px/13px Source Sans Pro;
+  color: #4D4F5C;
+ }
+
+.period{
+  font: normal normal normal 14px/20px Source Sans Pro;
+  color: #4D4F5C;
+  float: right;
+      position: relative;
+    top: -13px;
+}
+
+#gridropicon{
+  background: url(../images/icons.png) -227px 28px;
+  position: relative;
+    top: 5px;
+}
+
+.propic{
+  background-image: url(../images/nick.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 96px;
+  width: 96px;
+  border-radius: 100px;
+  margin: 10px auto 0 auto;
+}
+
+.penicon{
+  background: url(../images/icons.png) -253px -36px;
+    background-color: #6763E3;
+    border-radius: 100px;
+    height: 24px;
+    width: 24px;
+    border: 2px solid #ffff;
+    position: relative;
+    left: 80px;
+    top: 60px;
+}
+
+.mainname{
+  font: normal normal 600 18px/13px Source Sans Pro;
+color: #4D4F5C;
+width: 136px;
+margin: 20px auto 0 auto;
+}
+
+.mainloc{
+  font: normal normal normal 14px/25px Source Sans Pro;
+color: #43425D;
+opacity: 0.5;
+width: 78px;
+  margin: 10px auto 0 auto;
+}
+
+.social{
+  border-radius: 100px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  margin: 6px;
+}
+
+#twitter{
+  background: url(../images/icons.png) 107px 0;
+}
+
+#facebook{
+  background: url(../images/icons.png) 79px 0;
+}
+
+#linkedin{
+  background: url(../images/icons.png) 52px 0;
+}
+
+#whatsapp{
+  background: url(../images/icons.png) 25px 0;
+}
+
+.socialtainer{
+  margin: auto;
+    width: 156px;
+}
+
+.breakline{
+  width: 90%;
+    margin: 10px auto 30px auto;
+    height: 1px;
+    background-color: #0000001A;
+}
+
+#menuicon{
+  background: url(../images/icons.png) -139px 25px;
+  float: right;
+}
+
+.mobileno{
+  float: right;
+  font: normal normal normal 14px/25px Source Sans Pro;
+    color: #43425D;
+    opacity: 0.5;
+        position: relative;
+    top: -26px;
+}
+
+.tablcontainer{
+  overflow-x:auto;
+  margin-top: 20px;
+}
+
+.tablcontainer::-webkit-scrollbar {
+    display: none;
+}
+
+#tablcontainer a{
+  text-align: left;
+font: normal normal normal 14px/20px Source Sans Pro;
+color: #3B86FF;
+  position: relative;
+  top: 10px;
+}
+
+#tablcontainer {
+
+  height: 380px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  /*border-bottom: 1px solid #ddd;*/
+}
+
+tr{
+  border-bottom: 1px solid #0000001A;
+
+}
+
+th, td {
+  text-align: left;
+  padding: 11px 16px;
+}
+
+th{
+  text-align: left;
+font: normal normal 600 14px/18px Source Sans Pro;
+letter-spacing: 0px;
+color: #A3A6B4;
+opacity: 1;
+background-color: #F5F6FA;
+}
+
+td{
+  text-align: left;
+font: normal normal normal 14px/20px Source Sans Pro;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+}
+
+.video{
+  width: 100%;
+}
+
+.playpause {
+      background: url(../images/icons.png) -111px -36px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    margin: auto;
+    position: relative;
+    top: 18px;
+}
+
+.border{
+  width: 72px;
+height: 72px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+ 
+border-radius: 100px;
+margin: auto;
+position: relative;
+top: -160px;
+}
+
+.playb{
+  width: 60px;
+height: 60px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+opacity: 1;
+border-radius: 100px;
+margin: auto;
+position: relative;
+    top: -226px;
+}
+
+.grapcontainer{
+  /*background-color: darkred;*/
+  width: 100%;
+  float: right;
+  position: relative;
+    left: -10px;
+    overflow-x: auto;
+}
+
+.grapcontainer::-webkit-scrollbar {
+    display: none;
+}
+
+.piecontainer{
+        width: 300px;
+    margin: 0 auto 0 auto;
+position: relative;
+    top: -20px;
+}
+
+
+
+.pieline{
+  width:100%;
+  height: 1px;
+    background-color: #0000001A;
+margin-bottom: 15px;
+}
+
+.circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.pieloc{
+  display: inline-block;
+  margin-right: 10px;
+  font: normal normal normal 14px/25px Source Sans Pro;
+color: #43425D;
+}
+
+.piesales{
+  display: inline-block;
+  margin-right: 10px;
+  font: normal normal normal 14px/20px Source Sans Pro;
+color: #4D4F5C;
+opacity: 0.5;
+}
+
+.pieinfo{
+        position: relative;
+    top: 170px;
+    width: 60px;
+    margin: auto;
+    text-align: center;
+}
+
+.drops a{
+  text-decoration: none;
+  font: normal normal normal 16px/25px Source Sans Pro;
+color: #43425D;
+}
+
+.notdrop a{
+  text-decoration: none;
+}
+
+#jamespic{
+  background-image: url(../images/james.jpg);
+}
+#emespic{
+  background-image: url(../images/emes.jpg);
+}
+
+@media screen and (min-width: 510px) {
+
+  .piecontainer{
+      float: right;
+    left: -38px;
+}
+
+.piecont{
+  left: -8px;
+}
+
+  .mystyle{
+  width: 200px;
+}
+
+.mainstyle{
+  margin-left: 200px; 
+}
+
+.grids{
+  display: inline-block;
+    width: 29%;
+    margin-top: 0;
+}
+
+#profl{
+  float: right;
+}
+
+#pieblock{
+margin-left: 22px;
+}
+
+#tablcontainer{
+  margin-top: 20px;
+  width: 63%;
+}
+
+#provid{
+    
+    float: right;
+    position: absolute;
+    top: 735px;
+    right: 20px;
+}
+
+.vidwidth{
+  width: 28%;
+}
+
+  .notdrop{
+  right: 70px;
+  width: 430px;
+}
+
+.navcontainer{
+  overflow: visible;
+}
+
+.formstyle {
+  display: inline-block;
+}
+
+.uname {
+    display: inline-block;
+    }
+
+#dropicon {
+  display: inline-block;
+  position: relative;
+  top: -9px;
+}
+
+#isearch {
+  float: none;
+   margin-left: 20px;
+}
+
+.gridswidth{
+  width: 28.5%;
+}
+
+.vidblock{
+      width: 23.4%;
+}
+
+}
+
+
