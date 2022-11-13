@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="js/rpie.js"></script>
+	<title>ACME</title>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar"> <!-- sidebar start -->
+	<div class="acmelogo">ACME</div>
+  <a href="#"> <div id="hom"></div> Home</a>
+  <a href="#"> <div id="dash"></div> Dashboard</a>
+  <a href="#"> <div id="inx"></div> Inbox <span class="new">New</span> </a>
+  <a href="#"> <div id="prod"></div> Products</a>
+  <a href="#"> <div id="adm"></div> Admin</a>
+</div> <!-- sidebar end -->
+
+<div id="main"> <!-- main window start -->
+
+  <div class="navcontainer"><!-- navbar start -->
+  	
+  	<div class="sbaricon" id="burger" onclick="openNav()"></div>
+
+    <div class="navmenu">
+
+    <div class="sbaricon" id="bell" onclick="openNot()"><div class="greendot" id="green"></div></div> 
+    <div onclick="userdrop()" style="display: inline;">
+    <div class="uname">John Doe</div>  <div class="sbaricon" id="dropicon" ></div>
+    <div class="navpic"></div></div>
+    </div> 
+
+  	<div class="sbaricon" id="isearch"></div>
+  	<form class="formstyle">
+      <input type="text" name="ajith" placeholder="Search transactions,invoices or help">
+    </form>
+    
+  </div><!-- navbar end -->
+
+  <div class="drops" id="dropss">
+  	<a href="#myprofile"><div><div class="ddownicons" id="uicon"></div> <div class="iconname">My Profile</div></div></a>
+  	<a href="#billing"><div><div class="ddownicons" id="billicon"></div> <div class="iconname">Billing</div></div></a>
+  	<a href="#logout"><div><div class="ddownicons" id="logicon"></div> <div class="iconname">Logout</div></div></a>
+  	
+  </div>
+
+  <div class="notdrop" id="notdrops">
+  	<a href="#note"><div class="notpic" id="kamespic"></div><div class="notnam">Bavid Kames</div> <div class="timeago">2 min ago</div>
+  	<div class="message">Assigned you on the call with Sara</div></a>
+
+  	<a href="#note"><div class="notpic" id="marrypic"></div><div class="notnam">Alexa Marry</div> <div class="timeago">5 min ago</div>
+  	<div class="message">Marked the task <span class="blueink">New UI</span>  as done</div></a>
+
+  	<a href="#note"><div class="notpic" id="mariapic"></div><div class="notnam">Eva Maria</div> <div class="timeago">10 min ago</div>
+  	<div class="message">Added a new comment on sales task</div></a>
+
+  	<div class="notline"></div>
+
+  	<div class="showmore">Show More</div>
+
+  </div>
+
+  <div class="overcontainer">
+  <div class="overview">Overview</div>
+  <a href="#addfunds"><div class="funds">Add Funds <div class="plusicon"></div></div></a>
+  </div>
+
+  <div class="containerblocks">
+
+  <div class="grids" id="profl">
+  	<div class="propic"><div class="penicon"></div>
+  	</div>
+  		<div class="mainname">Nick Hersimenka</div>
+  		<div class="mainloc"> United States</div>
+
+  		<div class="socialtainer">
+      		<a href="#twitter"><div class="social" id="twitter"></div></a>
+      		<a href="#facebook"><div class="social" id="facebook"></div></a>
+      		<a href="#linkedin"><div class="social" id="linkedin"></div></a>
+      		<a href="#whatsapp"><div class="social" id="whatsapp"></div></a>
+    	</div>
+    	<div class="breakline"></div>
+
+    	<div class="gridhead">Our Users
+  		<div class="sbaricon" id="menuicon"></div>
+  		</div>
+
+  		<div style="margin-top: 30px;">
+  		
+  	<div class="notpic" id="jamespic"></div><div class="notnam">Drew James</div> 
+  	<div><div class="message" style="display: inline-block;">United States</div>
+  	<div class="mobileno">Mobile:8489679722</div>
+  	</div>
+
+		<div class="notpic" id="kamespic"></div><div class="notnam">Bavid Kames</div> 
+  		<div><div class="message" style="display: inline-block;">United States</div>
+  		<div class="mobileno">Mobile:8489679722</div>
+  		</div>
+
+  	<div class="notpic" id="emespic"></div><div class="notnam">Lavid Emes</div> 
+  	<div><div class="message" style="display: inline-block;">United States </div>
+  	<div class="mobileno">Mobile:8489679722</div>
+  	</div>
+  		</div>
+
+  </div>
+
+  <div class="grids" id="grap">
+  	<div class="gridhead">Statistics
+  		<div class="period">Last 6 months<div class="sbaricon" id="gridropicon"></div></div>
+  	</div>
+
+  	<div class="grapcontainer"><div id="chart"></div></div>
+
+  </div>
+
+
+  <div class="grids" id="pieblock">
+  	<div class="gridhead">Sales Distribution</div>
+
+  	<div class="piecontainer" id="piecon">
+  		<div class="pieinfo">230,900 Sales</div>
+  	<canvas id="myCanvas" width="300" height="300"></canvas>
+	<div class="pieline"></div>
+
+	<div class="next">
+	<div class="circle" style="background-color: #80E2FF;"></div><div class="pieloc">France</div>
+	<div class="piesales">4260 Sales</div>
+	<div class="circle" style="background-color: #F49FA8;"></div><div class="pieloc">Italy</div>
+	<div class="piesales">3970 Sales</div></div>
+
+	<div class="next">
+	<div class="circle" style="background-color: #FFDF94;"></div><div class="pieloc">Japan</div>
+	<div class="piesales">4260 Sales</div>
+	<div class="circle" style="background-color: #B5B3FB;"></div><div class="pieloc">Canada</div>
+	<div class="piesales">3970 Sales</div></div>
+
+	</div>
+
+  </div>
+
+  <div class="grids" id="tablcontainer">
+  	<div class="gridhead">Referrer</div>
+
+  	<div class="tablcontainer">
+  <table>
+    <tr style="border: none;">
+      <th>Location</th>
+      <th>Views</th>
+      <th>Sales</th>
+      <th>Conversion</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td>google.com</td>
+      <td>3746</td>
+      <td>752</td>
+      <td>43%</td>
+      <td>$19,291</td>
+    </tr>
+    <tr>
+      <td>facebook.com</td>
+      <td>8126</td>
+      <td>728</td>
+      <td>32%</td>
+      <td>$17638</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>Ajith</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+  </table>
+  	</div>
+	<a href="#show">Show More</a>
+  </div>
+
+  <div class="grids vidwidth" id="provid">
+  	<div class="gridhead">Product Video
+  		<div class="sbaricon" id="menuicon"></div>
+  		</div>
+  		
+  		<video  height="248px" class="video" poster="images/thumbnail.png">
+  <source src="images/workforce.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="border" style="opacity: 0.33; "></div><div class="playb"><div class="playpause"></div></div>
+  </div>
+  
+  </div>
+</div> <!-- main window end -->
+
+<script>
+
+
+function userdrop(){
+
+	var x = document.getElementById("dropss");
+  	x.classList.toggle("dropview");
+}
+
+function openNot(){
+	var x = document.getElementById("notdrops");
+  	x.classList.toggle("notview");
+
+  	var y = document.getElementById("green");
+  	y.classList.toggle("greenview");
+}
+
+$('.video').parent().click(function () {
+  if($(this).children(".video").get(0).paused)
+  	{ $(this).children(".video").get(0).play();   $(this).children(".border").fadeOut(); 
+  		$(this).children(".playb").fadeOut(); $(this).children(".playpause").fadeOut();
+    }
+    else{       $(this).children(".video").get(0).pause();
+  $(this).children(".border").fadeIn();  $(this).children(".playb").fadeIn(); $(this).children(".playpause").fadeIn();
+    }
+});
+
+
+// graph plugin
+var options = {
+          series: [{
+          name: 'Products Sold',
+          color: "#B5B3FB",
+          data: [15, 10, 15, 18, 15, 23]
+        }, {
+          name: 'Total Views',
+          color: "#80E2FF",
+          data: [18, 7, 16, 12, 16, 10]
+        }],
+          chart: {
+
+          	toolbar: {
+        show: false},
+          height: 350,
+          type: 'area'
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'smooth',
+          width: 2
+        },
+        xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        },
+
+        markers: {
+          size: 5,
+          hover: {
+            size: 9
+          }
+        },
+
+        yaxis: {
+             min: 5,
+            max: 25,
+            forceNiceScale: true,
+
+          labels: {
+            formatter: (val) => {
+                return '$' + val + 'k'
+            }
+          }
+        },
+
+        grid: {
+  xaxis: {
+    lines: {
+      show: true
+    }
+  }
+},
+  };
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+
+        function openNav() {
+  var x = document.getElementById("mySidebar");
+   x.classList.toggle("mystyle");
+
+   var y = document.getElementById("main");
+   y.classList.toggle("mainstyle");
+
+   var i = document.getElementById("profl");
+   i.classList.toggle("gridswidth");
+
+   var j = document.getElementById("pieblock");
+   j.classList.toggle("gridswidth");
+
+   var k = document.getElementById("grap");
+   k.classList.toggle("gridswidth");
+
+   var l = document.getElementById("provid");
+   l.classList.toggle("vidblock");
+
+   // var m = document.getElementById("piecon");
+   // m.classList.toggle("piecont");
+
+}
+
+
+// pie chart plugi
+
+   generatePieGraph('myCanvas', {
+    // Percentage of doughnut size
+  doughnutHoleSize: 52,
+  // Doughnut color
+  doughnutHoleColor: '#fff',
+  values: [25, 40, 35, 65],
+  colors: ['#F49FA8', '#FFDF94', '#B5B3FB', '#80E2FF']
+});
+
+
+</script>
+</body>
+</html>
